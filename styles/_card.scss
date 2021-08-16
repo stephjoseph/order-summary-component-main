@@ -1,0 +1,91 @@
+#order-card {
+  z-index: 2;
+  background-color: white;
+  width: 25vw;
+  height: 80vh;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-img {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.order-summary {
+  padding: 2rem;
+  margin-top: 2rem;
+  h2 {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  p {
+    padding: 0rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+.order-item {
+  @include flex(flex-start, center, row);
+  background: hsl(225, 100%, 98%);
+  margin: 1rem 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+
+  .item-info {
+    padding-left: 1rem;
+  }
+  .item-flex-container {
+    @include flex(flex-start, center, row);
+    flex-grow: 2;
+  }
+  a {
+    justify-self: flex-end;
+    flex-grow: 1;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+  }
+
+  a:active {
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, 0.6);
+  }
+}
+
+.buttons {
+  @include flex(flex-start, center, column);
+  margin-top: 0rem;
+
+  .payment-button {
+    background-color: hsl(245, 75%, 52%);
+    border: none;
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1rem 8.5rem;
+    border-radius: 10px;
+    margin: 0rem 0rem 2rem 0rem;
+    cursor: pointer;
+    box-shadow: 0px 10px 15px hsla(245, 75%, 52%, 0.25);
+  }
+
+  .payment-button:active {
+    opacity: 0.7;
+  }
+
+  .cancel-button {
+    background: none;
+    border: none;
+    color: hsl(224, 23%, 55%);
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    cursor: pointer;
+  }
+
+  .cancel-button:active {
+    color: hsl(223, 47%, 23%);
+  }
+}
